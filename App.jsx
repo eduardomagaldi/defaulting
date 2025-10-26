@@ -126,15 +126,9 @@ function getCommands() {
     },
     {
       command:
-        'swift set_cursor_size.swift && echo "Note: May need restart to take effect"',
+        'open "x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display"',
       description:
-        "Set cursor size to 1.0 (requires set_cursor_size.swift file)",
-      selected: false,
-    },
-    {
-      command:
-        "open x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display",
-      description: "Open Accessibility > Display in System Settings",
+        "Open System Settings to Accessibility > Display for cursor size",
       selected: false,
     },
     {
@@ -238,3 +232,5 @@ function getCommands() {
     },
   ];
 }
+
+// open "x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display"
