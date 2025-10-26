@@ -125,9 +125,17 @@ function getCommands() {
       ...selectedObject,
     },
     {
-      command: "defaults write -g com.apple.mouse.cursorsize 4.0",
-      description: "Make the mouse cursor bigger",
-      ...selectedObject,
+      command:
+        'swift set_cursor_size.swift && echo "Note: May need restart to take effect"',
+      description:
+        "Set cursor size to 1.0 (requires set_cursor_size.swift file)",
+      selected: false,
+    },
+    {
+      command:
+        "open x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display",
+      description: "Open Accessibility > Display in System Settings",
+      selected: false,
     },
     {
       command: "defaults write com.apple.dock wvous-br-corner -int 0",
