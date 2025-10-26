@@ -214,6 +214,13 @@ function getCommands() {
     },
 
     {
+      command:
+        'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
+      description: "Install oh-my-zsh",
+      ...selectedObject,
+    },
+
+    {
       command: "killall Dock",
       description: "Restart the dock",
       ...selectedObject,
@@ -221,6 +228,12 @@ function getCommands() {
     {
       command: "killall Finder",
       description: "Restart the finder",
+      ...selectedObject,
+    },
+
+    {
+      command: "launchctl bootout gui/$(id -u eduardo)",
+      description: "Logout from eduardo's account",
       ...selectedObject,
     },
   ];
