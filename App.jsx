@@ -125,13 +125,6 @@ function getCommands() {
       ...selectedObject,
     },
     {
-      command:
-        'open "x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display"',
-      description:
-        "Open System Settings to Accessibility > Display for cursor size",
-      selected: false,
-    },
-    {
       command: "defaults write com.apple.dock wvous-br-corner -int 0",
       description: "Remove notes from the bottom right corner of the screen",
       ...selectedObject,
